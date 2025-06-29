@@ -1,0 +1,313 @@
+@font-face {
+  font-family: "ChampagneBold";
+  src: url("../assets/fonts/Champagne_&_Limousines_Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  background-color: #f0d859;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 78px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: "ChampagneBold", sans-serif;
+  color: #374a52;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #1d57a8;
+}
+
+/* Corpo */
+.corpo {
+  background: linear-gradient(to bottom,
+      rgba(27, 92, 165, 0.85),
+      rgba(77, 165, 216, 0.85)),
+    url("../assets/imagem-de-fundo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 40px;
+  text-align: center;
+}
+
+/* Título */
+.box-titulo {
+  font-size: 48px;
+  font-family: "ChampagneBold", sans-serif;
+  color: #efd759;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1260px;
+}
+
+.card {
+  background-color: #f0d859;
+  width: 340px;
+  height: 320px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  background-color: #e8d04f;
+}
+
+.card:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card img {
+  padding-top: 10px;
+  width: 93px;
+}
+
+.card h3 {
+  font-size: 32px;
+  font-family: "ChampagneBold", sans-serif;
+  color: #1d57a8;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 20px;
+  font-family: "ChampagneBold", sans-serif;
+  color: #333;
+  padding: 0 10px;
+}
+
+/* Card Especial */
+.card-sobre {
+  width: 100%;
+  max-width: 1260px;
+  margin: 40px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  animation: pulse 2s infinite alternate;
+  position: relative;
+}
+
+.card-sobre::before {
+  content: "NOVO JOGO!";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #FF5722;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  z-index: 1;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.card-sobre img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card-sobre:hover img {
+  transform: scale(1.02);
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.98);
+  }
+
+  100% {
+    transform: scale(1.01);
+  }
+}
+
+.card-sobre-texto {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.card-sobre-texto h3 {
+  font-size: 28px;
+  color: #1d57a8;
+  margin: 0 0 15px;
+}
+
+.card-sobre-texto p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* RESPONSIVIDADE */
+/* Notebooks (1024px) */
+@media (max-width: 1024px) {
+  .cabecalho {
+    padding: 20px 50px;
+  }
+
+  .card {
+    width: 300px;
+    height: 280px;
+  }
+}
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .box-titulo {
+    font-size: 36px;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .cards {
+    gap: 20px;
+  }
+
+  .card-sobre {
+    max-width: 90%;
+  }
+
+  .card-sobre-texto {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .card-sobre-texto h3 {
+    font-size: 24px;
+  }
+
+  .card-sobre-texto p {
+    font-size: 14px;
+  }
+
+  /* .card-sobre img {
+    max-width: 240px;
+  
+}*/
+  .card-sobre img {
+    animation: pulse 2s infinite alternate;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.98);
+    }
+
+    100% {
+      transform: scale(2.02);
+    }
+  }
+
+
+  /* Celulares (480px) */
+  @media (max-width: 480px) {
+    .cabecalho {
+      padding: 15px;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    .menu a {
+      font-size: 16px;
+    }
+
+    .box-titulo h2 {
+      font-size: 28px;
+    }
+
+    .card {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+    }
+
+    .card-sobre {
+      margin: 20px auto;
+    }
+  }
+}

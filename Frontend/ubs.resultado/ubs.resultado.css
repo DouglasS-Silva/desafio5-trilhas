@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background: #1976d2;
+  color: #333;
+}
+
+header {
+  background-color: #f0d859;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #374a52;
+  font-weight: bold;
+}
+
+.container {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(
+      to bottom,
+      rgba(27, 92, 165, 0.75),
+      rgba(77, 165, 216, 0.75)
+    ),
+    url("../assets/imagem-de-fundo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+h1 {
+  color: #f0d859;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto 40px;
+  background-color: #fffde7;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  outline: none;
+  background-color: transparent;
+  color: #333;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-box img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Cards de UBS */
+
+.ubs-card {
+  background-color: #f0d859;
+  border-radius: 8px;
+  padding: 25px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ubs-card h2 {
+  color: #1565c0;
+  font-size: 18px;
+  margin: 0 0 10px;
+  white-space: nowrap;
+}
+
+.ubs-card p {
+  font-size: 14px;
+  margin: 20px 0 15px;
+}
+
+.btn-saiba-mais {
+  background-color: #1b5ca5;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .menu {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .menu a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 28px;
+    padding: 0 10px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .search-box input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .ubs-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .ubs-card h2 {
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  .btn-saiba-mais {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .search-box input {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .ubs-card h2 {
+    font-size: 15px;
+  }
+
+  .ubs-card p {
+    font-size: 13px;
+  }
+
+  .btn-saiba-mais {
+    font-size: 13px;
+    padding: 8px;
+  }
+}

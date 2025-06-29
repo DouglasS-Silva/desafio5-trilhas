@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscar UBS</title>
+  <link href="buscar.ubs.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../assets/logo-diagnostix.png" alt="Diagnóstix" />
+    </div>
+    <nav class="menu">
+      <a href="../home/home.html">Home</a>
+      <a href="../faq/faq.html">Fale Conosco</a>
+      <a href="../login/login.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Buscar UBS</h1>
+
+    <div class="search-box">
+      <div class="autocomplete">
+        <input type="text" id="ubs-search" placeholder="Digite aqui a UBS que você busca" autocomplete="off" />
+        <div id="autocomplete-list" class="autocomplete-items"></div>
+      </div>
+      <button id="search-button">
+        <img src="../assets/lupa_cinza.png" alt="Buscar" />
+      </button>
+    </div>
+
+    <div id="results-container" class="results-container">
+    </div>
+  </div>
+  <script src="buscar.ubs.js"></script>
+</body>
+
+</html>
